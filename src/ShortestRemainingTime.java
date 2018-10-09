@@ -5,7 +5,7 @@ public class ShortestRemainingTime extends Algorithms {
 
 	Parameters parameters;
 	public ShortestRemainingTime(Process[] processPool) {
-		super.queue = new LinkedList<>(Arrays.asList(processPool));
+		super.processPool = processPool;
 		parameters = new Parameters();
 	}
 	@Override

@@ -6,7 +6,7 @@ public class HPFP extends Algorithms {
 	
 	Parameters parameters;
 	public HPFP(Process[] processPool) {
-		super.queue = new LinkedList<>(Arrays.asList(processPool));
+		super.processPool = processPool;
 		parameters = new Parameters();
 	}
 	@Override

@@ -5,7 +5,7 @@ public class ShortestJobFirst extends Algorithms {
 	
 	Parameters parameters;
 	public ShortestJobFirst(Process[] processPool) {
-		super.queue = new LinkedList<>(Arrays.asList(processPool));
+		super.processPool = processPool;
 		parameters = new Parameters();
 	}
 	

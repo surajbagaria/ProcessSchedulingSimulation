@@ -10,7 +10,7 @@ public class Simulation {
 		
 		
 		
-		Algorithms fcfs = new FirstComeFirstServe(pf.getPool());
-		System.out.println(fcfs.run().getParameterInfo());
+		Algorithms rr = new RoundRobin(pf.getPool());
+		System.out.println(rr.run().getParameterInfo());
 	}
 }

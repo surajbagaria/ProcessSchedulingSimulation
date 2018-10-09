@@ -5,7 +5,7 @@ public class HPFNP extends Algorithms {
 
 	Parameters parameters;
 	public HPFNP(Process[] processPool) {
-		super.queue = new LinkedList<>(Arrays.asList(processPool));
+		super.processPool = processPool;
 		parameters = new Parameters();
 	}
 	@Override

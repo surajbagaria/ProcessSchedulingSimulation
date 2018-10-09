@@ -9,7 +9,7 @@ public class FirstComeFirstServe extends Algorithms{
 	Parameters parameters;
 	
 	public FirstComeFirstServe(Process[] processPool) {
-		super.queue = new LinkedList<>(Arrays.asList(processPool));
+		super.processPool = processPool;
 		parameters = new Parameters();
 	}
 	
@@ -17,7 +17,7 @@ public class FirstComeFirstServe extends Algorithms{
 	@Override
 	public Parameters run() {
 		//write code....
-		System.out.println(((Process) queue.peek()).getInfo());
+		
 		
 		parameters.setAvgTurnAroundTime(15);
 		parameters.setAvgWaitingTime(12);
