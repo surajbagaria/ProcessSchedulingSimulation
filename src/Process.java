@@ -8,6 +8,8 @@ public class Process {
 	int responseTime;
 	int turnAroundTime;
 	int waitingTime;
+	
+	int completionTime;
 	Random rn = new Random();
 
 
@@ -36,6 +38,14 @@ public void setPriority() {
 		this.priority = a;
 		
 	}
+}
+
+public void setCompletionTime(int completionTime) {
+	this.completionTime = completionTime;
+}
+
+public int getCompletionTime() {
+	return completionTime;
 }
 
 public void setTurnAroundTime(int turnAroundTime) {

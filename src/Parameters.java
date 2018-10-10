@@ -1,35 +1,44 @@
 public class Parameters {
 	
-	int avgTurnAroundTime;
-	int avgWaitingTime;
-	int avgResponseTime;
+	double avgTurnAroundTime;
+	double avgWaitingTime;
+	double avgResponseTime;
+	double Throughput;
 	
-	public void setAvgTurnAroundTime (int avgTurnAroundTime) {
+	public void setAvgTurnAroundTime (double avgTurnAroundTime) {
 		
 		this.avgTurnAroundTime = avgTurnAroundTime;
 	}
 	
-	public void setAvgWaitingTime (int avgWaitingTime) {
+	public void setAvgWaitingTime (double avgWaitingTime) {
 		this.avgWaitingTime = avgWaitingTime;
 	}
 	
-	public void setAvgResponseTime (int avgResponseTime) {
+	public void setAvgResponseTime (double avgResponseTime) {
 		this.avgResponseTime = avgResponseTime;
 	}
 	
-	public int getAvgTurnAroundTime () {
+	public double getAvgTurnAroundTime () {
 		return this.avgTurnAroundTime;
 	}
 	
-	public int getAvgWaitingTime () {
+	public void setThroughput (double Throughput) {
+		this.Throughput = Throughput;
+	}
+	
+	public double getThroughput () {
+		return this.Throughput;
+	}
+	
+	public double getAvgWaitingTime () {
 		return this.avgWaitingTime;
 	}
 	
-	public int getAvgResponseTime () {
+	public double getAvgResponseTime () {
 		return this.avgResponseTime;
 	}
 	
 	public String getParameterInfo() {
-		return "Average Turn Around Time: " + this.avgTurnAroundTime + " Average Waiting Time: " + this.avgWaitingTime + " Average Response Time: " + this.avgResponseTime;
+		return "Average Turn Around Time: " + this.avgTurnAroundTime + " Average Waiting Time: " + this.avgWaitingTime + " Average Response Time: " + this.avgResponseTime  + " Throughput: " + this.Throughput;
 	}
 }

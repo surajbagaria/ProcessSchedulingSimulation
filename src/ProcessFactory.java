@@ -26,8 +26,6 @@ public class ProcessFactory {
 			processPool[i].arrivalTime = arrayOfArrivalTime[i];
 		}
 		
-		processPool[0].arrivalTime = 0;
-		
 		
 	}
 	
