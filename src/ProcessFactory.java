@@ -9,7 +9,6 @@ public class ProcessFactory {
 			processPool[i].setArrivalTime();
 			processPool[i].setRunTime();
 			processPool[i].setPriority();
-
 		}
 
 	}
@@ -19,14 +18,12 @@ public class ProcessFactory {
 		for (int i = 0; i < processPool.length; i++) {
 			arrayOfArrivalTime[i] = processPool[i].getArrivalTime();
 		}
-
 		Arrays.sort(arrayOfArrivalTime);
 		
 		for (int i = 0; i < arrayOfArrivalTime.length; i++) {
 			processPool[i].arrivalTime = arrayOfArrivalTime[i];
 		}
-		
-		
+		processPool[0].arrivalTime = 0;
 	}
 	
 	public void getAllProcess() {
