@@ -6,17 +6,20 @@ public class Simulation {
 	
 		pf.sortProcess();
 		pf.getAllProcess();
-		pf.getSimulatedInfo();
 		
 		
+		Algorithms fcfs = new FirstComeFirstServe(pf.getPool());
+		System.out.println(fcfs.run().getParameterInfo());
+				
+		//Algorithms sjf = new ShortestJobFirst(pf.getPool());
+		//System.out.println(sjf.run().getParameterInfo());
 		
-		//Algorithms fcfs = new FirstComeFirstServe(pf.getPool());
-		//System.out.println(fcfs.run().getParameterInfo());
-		
-		Algorithms sjf = new ShortestJobFirst(pf.getPool());
-		System.out.println(sjf.run().getParameterInfo());
+		//Algorithms srtf = new ShortestRemainingTime(pf.getPool());
+		//System.out.println("Watch this ====>>>" + srtf.run().getAvgTurnAroundTime());
+		//System.out.println(srtf.run().getParameterInfo());
 		
 		//Algorithms rr = new RoundRobin(pf.getPool());
 		//System.out.println(rr.run().getParameterInfo());
+		//pf.getSimulatedInfo();
 	}
 }

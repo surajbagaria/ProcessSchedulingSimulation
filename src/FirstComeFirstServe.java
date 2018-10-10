@@ -37,7 +37,7 @@ public class FirstComeFirstServe extends Algorithms{
 		while (!queue.isEmpty()) {
 			// no process should get the CPU for the first time after time quantum 99
 			if (timeQuantum <= 99 ) {
-				Process currJob = queue.peek();
+				Process currJob = (Process) queue.peek();
 
 				if (startingQueueSize == queue.size() || (currJob.getArrivalTime() > prevJob.getCompletionTime())) {
 					currJob.setCompletionTime(currJob.getArrivalTime() + currJob.getRunTime());
@@ -83,7 +83,8 @@ public class FirstComeFirstServe extends Algorithms{
 				
 			} else {
 				if (timeQuantum > 99) {
-					System.out.println("Job #" + queue.peek().getId() + " is not processed because it got CPU for the first time after time quantum 99.");
+					Process currJob = (Process) queue.peek();
+					System.out.println("Job #" + currJob.getId() + " is not processed because it got CPU for the first time after time quantum 99.");
 					timeQuantum = 99;
 				}
 

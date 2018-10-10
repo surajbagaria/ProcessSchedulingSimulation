@@ -1,8 +1,9 @@
 import java.util.Queue;
 
 public abstract class Algorithms {
-	Queue<Process> queue;
+	Queue<Object> queue;
+	Process[] processPool;
 	public abstract Parameters run ();
 	
-	
+	Process process[];
 }

@@ -31,7 +31,7 @@ public class ShortestJobFirst extends Algorithms {
 			// no process should get the CPU for the first time after time quantum 99
 			if (timeQuantum <= 99.0) {
 
-				Process currJob = queue.peek();
+				Process currJob = (Process) queue.peek();
 
 				// if first job to be processed or there is some idle time
 				if (startingQueueSize == queue.size() || (currJob.getArrivalTime() > prevJob.getCompletionTime())) {
@@ -78,7 +78,8 @@ public class ShortestJobFirst extends Algorithms {
 
 			} else {
 				if (timeQuantum > 99) {
-					System.out.println("Job #" + queue.peek().getId() + " was not processed because it got CPU for the first time after time quantum 99.");
+					Process currJob = (Process) queue.peek();
+					System.out.println("Job #" + currJob.getId() + " was not processed because it got CPU for the first time after time quantum 99.");
 					timeQuantum = 99;
 				}
 			}
